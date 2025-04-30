@@ -2,95 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uddipta Bhardwaj | Astrophysics Researcher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uddipta Bhardwaj</title>
+  <!-- Three.js for background animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Roboto', sans-serif;
-      color: white;
-    }
-    /* Particles.js container */
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .overlay {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 0 20px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
-      max-width: 700px;
-      line-height: 1.5;
-    }
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00ffff;
-    }
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
+    /* --- Reset & Base --- */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body, html { width:100%; height:100%; overflow-x:hidden; font-family: Arial, sans-serif; background:#000; color:#eee; }
+    a { color: #3fa9f5; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    /* --- Fullscreen Canvas --- */
+    #bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+    /* --- Overlay Container --- */
+    .container { position:relative; max-width:900px; margin:0 auto; padding:2rem; }
+    nav { display:flex; justify-content:center; gap:1.5rem; margin-bottom:2rem; }
+    nav a { font-weight:600; }
+    header { text-align:center; margin-bottom:3rem; }
+    header h1 { font-size:3rem; margin-bottom:0.5rem; }
+    header p { font-size:1.2rem; color:#bbb; }
+    section { margin-bottom:3rem; line-height:1.6; }
+    section h2 { font-size:2rem; margin-bottom:1rem; border-bottom:1px solid #333; padding-bottom:0.5rem; }
+    footer { text-align:center; font-size:0.9rem; color:#555; padding:1rem 0; border-top:1px solid #222; }
+    /* --- Content Boxes --- */
+    .box { background: rgba(20,20,20,0.8); padding:1.5rem; border-radius:8px; }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="overlay">
-    <h1>Uddipta Bhardwaj</h1>
-    <h2>PhD researcher at GRAPPA, University of Amsterdam | Gravitational Waves | Machine Learning | Inference</h2>
-  </div>
-  <footer>&copy; 2025 Uddipta Bhardwaj | Built with ❤️</footer>
 
-  <!-- Particles.js library -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <!-- Initialize particles -->
+  <!-- Background canvas -->
+  <canvas id="bg"></canvas>
+
+  <div class="container">
+    <!-- Navigation -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="box">
+      <h1>Uddipta Bhardwaj</h1>
+      <p>PhD researcher at GRAPPA, University of Amsterdam<br>
+      Gravitational Wave Astrophysics · Bayesian Inference · Machine Learning</p>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="box">
+      <h2>About</h2>
+      <p>
+        I’m a PhD researcher at the University of Amsterdam’s GRAPPA institute, supervised by Dr. Samaya Nissanke, Dr. Christoph Weniger, and Dr. Philipp Mösta. Originally from Barpeta, Assam, India, my work bridges gravitational wave astrophysics, Bayesian statistics, and machine learning.
+      </p>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="box">
+      <h2>Research</h2>
+      <p>
+        My primary focus is on <strong>simulation-based inference</strong> for gravitational wave signals. I lead development of <em>PEREGRINE</em>, a scalable library for parameter estimation in gravitational wave astronomy. I collaborate with LIGO, Virgo, and KAGRA on detection and data analysis methods.
+      </p>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="box">
+      <h2>Selected Publications</h2>
+      <ul>
+        <li><a href="https://doi.org/10.1103/PhysRevD.xxx">Sequential simulation-based inference for gravitational wave signals</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevD.yyy">PEREGRINE: A simulation-based inference toolkit</a></li>
+        <li><a href="https://doi.org/10.1103/PhysRevD.zzz">Advanced Bayesian methods in GW astronomy</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="box">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:u.bhardwaj@uva.nl">u.bhardwaj@uva.nl</a></p>
+      <p>
+        GitHub: <a href="https://github.com/Uddiptaatwork">Uddiptaatwork</a><br>
+        LinkedIn: <a href="https://nl.linkedin.com/in/uddipta-bhardwaj-05b752161">/uddipta-bhardwaj</a><br>
+        ResearchGate: <a href="https://www.researchgate.net/profile/Uddipta-Bhardwaj">/Uddipta-Bhardwaj</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Uddipta Bhardwaj · Built with ♥ and Three.js
+    </footer>
+  </div>
+
+  <!-- Three.js Animation -->
   <script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('particles.js loaded - callback');
+    // Basic scene setup
+    const canvas = document.getElementById('bg');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
+    camera.position.z = 30;
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Light
+    const ambient = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambient);
+    const pointLight = new THREE.PointLight(0xffffff, 1);
+    pointLight.position.set(50,50,50);
+    scene.add(pointLight);
+
+    // Two compact objects (spheres)
+    const sphereGeo = new THREE.SphereGeometry(2, 32, 32);
+    const mat1 = new THREE.MeshStandardMaterial({ color: 0xddddff, metalness: 0.6, roughness: 0.2 });
+    const mat2 = new THREE.MeshStandardMaterial({ color: 0xffdddd, metalness: 0.6, roughness: 0.2 });
+    const s1 = new THREE.Mesh(sphereGeo, mat1);
+    const s2 = new THREE.Mesh(sphereGeo, mat2);
+    scene.add(s1, s2);
+
+    // Wave rings
+    const rings = [];
+    const ringMaterial = new THREE.LineBasicMaterial({ color: 0x88aaff, transparent: true, opacity: 0.4 });
+    function spawnRing() {
+      const geo = new THREE.RingGeometry(2.1, 2.3, 64);
+      const ring = new THREE.LineLoops(geo, ringMaterial);
+      ring.rotation.x = Math.PI/2;
+      ring.position.copy(s1.position.clone().add(s2.position).multiplyScalar(0.5));
+      rings.push(ring);
+      scene.add(ring);
+    }
+
+    // Animation parameters
+    let angle = 0, dist = 15;
+    const mergeSpeed = 0.0005;
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth/window.innerHeight;
+      camera.updateProjectionMatrix();
     });
+
+    // Animate
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // decay distance to simulate inspiral
+      dist = Math.max(dist - mergeSpeed, 0);
+      angle += 0.01 + (mergeSpeed * 50);
+
+      // update sphere positions
+      s1.position.set(Math.cos(angle)*dist, Math.sin(angle)*dist, 0);
+      s2.position.set(-Math.cos(angle)*dist, -Math.sin(angle)*dist, 0);
+
+      // spawn wave rings periodically
+      if (Math.random() < 0.03) spawnRing();
+
+      // animate rings (expand & fade)
+      rings.forEach((r, i) => {
+        r.scale.x += 0.1; r.scale.y += 0.1;
+        r.material.opacity *= 0.98;
+        if (r.material.opacity < 0.01) {
+          scene.remove(r);
+          rings.splice(i, 1);
+        }
+      });
+
+      renderer.render(scene, camera);
+    }
+    animate();
   </script>
 </body>
 </html>
