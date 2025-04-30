@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/bio' | relative_url }}">Bio</a></li>
+        <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/cv' | relative_url }}">CV</a></li>
+        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  {% if page.url == "/" %}
+    <!-- Hero on Home only -->
+    <section class="hero">
+      <img src="{{ '/assets/img/hero-bg.jpg' | relative_url }}" alt="merging compact objects">
+      <div class="hero-text">
+        <h1>Uddipta Bhardwaj</h1>
+        <p>PhD Scholar, GRAPPA @ University of Amsterdam</p>
+        <blockquote>
+          “There is stardust in your veins. We are literally… children of the stars.”<br>
+          <cite>– Jocelyn Bell Burnell</cite>
+        </blockquote>
+      </div>
+    </section>
+  {% endif %}
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer>
+    © 2025 Uddipta Bhardwaj
+  </footer>
+</body>
+</html>
