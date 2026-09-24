@@ -1,0 +1,64 @@
+# Short-author-list papers (10 authors or fewer), newest first.
+# Collaboration papers live in _data/collaboration.yml.
+- year: 2026
+  title: "Sequential simulation-based inference for extreme mass ratio inspirals"
+  authors: "P. S. Cole, J. Alvey, L. Speri, C. Weniger, **U. Bhardwaj**, D. Gerosa, G. Bertone"
+  venue: "Physical Review D 113, 063030"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2505.16795" }
+    - { name: DOI,   url: "https://doi.org/10.1103/4cd3-wfjr" }
+
+- year: 2025
+  title: "Sequentially Learning Gravity"
+  authors: "**U. Bhardwaj**"
+  venue: "PhD thesis, University of Amsterdam"
+  links:
+    - { name: INSPIRE, url: "https://inspirehep.net/literature/2926023" }
+
+- year: 2025
+  title: "Leveraging time-dependent instrumental noise for the LISA stochastic gravitational wave background analysis"
+  authors: "J. Alvey, **U. Bhardwaj**, V. Domcke, M. Pieroni, C. Weniger"
+  venue: "Physical Review D 111, 102006"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2408.00832" }
+    - { name: DOI,   url: "https://doi.org/10.1103/PhysRevD.111.102006" }
+
+- year: 2025
+  title: "The impact of binary neutron star outflow mass models on kilonova parameter estimation"
+  authors: "A. Henkel, F. Foucart, S. Melfor, S. Nissanke, A. Wernersson, **U. Bhardwaj**"
+  venue: "Preprint"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2504.03900" }
+
+- year: 2024
+  title: "Simulation-based inference for stochastic gravitational wave background data analysis"
+  authors: "J. Alvey, **U. Bhardwaj**, V. Domcke, M. Pieroni, C. Weniger"
+  venue: "Physical Review D 109, 083008"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2309.07954" }
+    - { name: DOI,   url: "https://doi.org/10.1103/PhysRevD.109.083008" }
+    - { name: Code,  url: "https://github.com/PEREGRINE-GW/saqqara" }
+
+- year: 2024
+  title: "Towards an implicit-likelihood future for gravitational wave data analysis"
+  authors: "**U. Bhardwaj**"
+  venue: "PoS EPS-HEP2023, 066 (proceedings)"
+  links:
+    - { name: DOI, url: "https://doi.org/10.22323/1.449.0066" }
+
+- year: 2023
+  title: "What to do when things get crowded? Scalable joint analysis of overlapping gravitational wave signals"
+  authors: "**U. Bhardwaj**†, J. Alvey†, S. Nissanke, C. Weniger"
+  venue: "Preprint · † equal contribution"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2308.06318" }
+    - { name: Code,  url: "https://github.com/PEREGRINE-GW/peregrine/tree/overlapping" }
+
+- year: 2023
+  title: "Sequential simulation-based inference for gravitational wave signals"
+  authors: "**U. Bhardwaj**, J. Alvey, B. K. Miller, S. Nissanke, C. Weniger"
+  venue: "Physical Review D 108, 042004"
+  links:
+    - { name: arXiv, url: "https://arxiv.org/abs/2304.02035" }
+    - { name: DOI,   url: "https://doi.org/10.1103/PhysRevD.108.042004" }
+    - { name: Code,  url: "https://github.com/PEREGRINE-GW/peregrine" }

@@ -1,0 +1,8 @@
+# Newest first. The 8 most recent show on the About me page.
+# text is Markdown, so links work:
+# - date: "Oct 2026"
+#   text: "New paper: [Title of the paper](https://arxiv.org/abs/XXXX.XXXXX)"
+- date: "Aug 2025"
+  text: "I started as a postdoctoral researcher at the gravitational physics group at [ETH Zürich](https://vallisneri-group.ethz.ch/people.html)."
+- date: "May 2025"
+  text: "I defended my PhD thesis, *Sequentially Learning Gravity*, at the University of Amsterdam."

@@ -1,0 +1,9 @@
+- name: peregrine
+  url: "https://github.com/PEREGRINE-GW/peregrine"
+  body: "Truncated marginal neural ratio estimation for gravitational-wave transients: targeted marginal posteriors at about 2% of the waveform evaluations of standard samplers, including overlapping signals."
+- name: saqqara
+  url: "https://github.com/PEREGRINE-GW/saqqara"
+  body: "Neural ratio estimation for the LISA stochastic gravitational-wave background, robust to transient signals and time-varying instrumental noise."
+- name: praxis
+  url: "https://github.com/Uddiptaatwork/praxis"
+  body: "A harness that runs a large language model (examples use Claude) as a small research lab following the scientific method, with provenance-checked domain packs for LVK gravitational waves and pulsar timing arrays."

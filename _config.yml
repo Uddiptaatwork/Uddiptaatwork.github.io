@@ -1,0 +1,47 @@
+# ---- edit these ----
+title: Uddipta Bhardwaj
+role: Postdoctoral Researcher
+department: Department of Physics
+institution: ETH Zürich
+email: ubhardwaj@phys.ethz.ch
+photo: /assets/img/photo.jpg
+description: Uddipta Bhardwaj, postdoctoral researcher at ETH Zürich working on contrastive learning for gravitational-wave science.
+url: "https://uddiptaatwork.github.io"
+baseurl: ""
+banner: strain        # strain (LISA signals) | ringfield (particle ring)
+
+nav:
+  - { name: Home,            url: / }
+  - { name: Research,        url: /research/ }
+  - { name: Publications,    url: /publications/ }
+  - { name: Teaching,        url: /teaching/ }
+  - { name: Blog,            url: /blog/ }
+  - { name: Contact,         url: /contact/ }
+
+profiles:
+  # icon: file name in _includes/icons/ (optional)
+  - { name: INSPIRE-HEP, icon: inspire,  url: "https://inspirehep.net/authors/2633422" }
+  - { name: ORCID,       icon: orcid,    url: "https://orcid.org/0000-0003-1233-4174" }
+  - { name: GitHub,      icon: github,   url: "https://github.com/Uddiptaatwork" }
+  - { name: LinkedIn,    icon: linkedin, url: "https://www.linkedin.com/in/uddipta-bhardwaj-05b752161/" }
+
+# ---- leave alone ----
+# kramdown must NOT pre-process math; MathJax does it in the browser
+kramdown:
+  math_engine: null
+
+author: Uddipta Bhardwaj
+
+# blog posts: _posts/YYYY-MM-DD-slug.md
+permalink: /blog/:year/:title/
+defaults:
+  - scope: { type: posts }
+    values: { layout: post }
+feed:
+  path: /blog/feed.xml
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+exclude: [README.md, Gemfile, Gemfile.lock]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- seo -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{%- feed_meta -%}
+{%- if page.math -%}
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    tags: 'ams'
+  },
+  svg: { fontCache: 'global' },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js"></script>
+{%- endif -%}
+
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav">
+      {%- for item in site.nav -%}
+      {%- assign on = false -%}
+      {%- if page.url == item.url -%}{%- assign on = true -%}
+      {%- elsif item.url != '/' and page.url contains item.url -%}{%- assign on = true -%}{%- endif -%}
+      <a href="{{ item.url | relative_url }}"{% if on %} class="on" aria-current="page"{% endif %}>{{ item.name }}</a>
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>
+
+<div class="banner{% unless page.url == '/' %} short{% endunless %}">
+  {%- if site.banner == 'ringfield' %}
+  <canvas id="ringfield"></canvas>
+  <svg class="fallback" viewBox="0 0 1400 300" preserveAspectRatio="xMidYMid slice"
+       xmlns="http://www.w3.org/2000/svg" role="img"
+       aria-label="Strain data from two detectors showing a compact binary merger.">
+    <rect width="1400" height="300" fill="var(--band)"></rect>
+    <g id="grid" stroke="#FFFFFF" stroke-opacity=".05"></g>
+    <path id="traceB" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-opacity=".75" stroke-linecap="round"></path>
+    <path id="traceA" fill="none" stroke="var(--band-ink)" stroke-width="1.5" stroke-opacity=".9" stroke-linecap="round"></path>
+  </svg>
+  {%- else %}
+  <canvas id="strain" role="img" aria-label="Simulated LISA strain: a massive black hole binary, galactic binaries, an extreme mass ratio inspiral and a stochastic background overlapping in noise."></canvas>  {%- endif %}
+</div>
+
+<div class="wrap">
+  <aside class="card">
+    <img class="photo" src="{{ site.photo | relative_url }}" alt="{{ site.title }}">
+    <h1>{{ site.title }}</h1>
+    <p class="role">{{ site.role }}</p>
+    <p class="aff">{{ site.department }}<br>{{ site.institution }}</p>
+    <div class="links">
+      {%- for p in site.profiles -%}
+      <a href="{{ p.url }}">{% if p.icon %}{% include icons/{{ p.icon }}.svg %}{% endif %}<span>{{ p.name }}</span></a>
+      {%- endfor -%}
+    </div>
+  </aside>
+
+  <main>
+    <h2>{{ page.title }}</h2>
+    {{ content }}
+  </main>
+</div>
+
+{%- if site.banner == 'ringfield' %}
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/ringfield.js' | relative_url }}"></script>
+{%- else %}
+<script src="{{ '/assets/js/strain.js' | relative_url }}"></script>
+{%- endif %}
+</body>
+</html>
